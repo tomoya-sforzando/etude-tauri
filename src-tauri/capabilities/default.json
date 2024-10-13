@@ -1,0 +1,21 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "shell:allow-open",
+    "fs:default",
+    {
+      "identifier": "fs:allow-desktop-read-recursive",
+      "allow": [{ "path": "$DESKTOP/videos/*"}]
+    },
+    {
+      "identifier": "fs:allow-watch",
+      "allow": [{ "path": "$DESKTOP/videos/*"}]
+    }
+  ]
+}
